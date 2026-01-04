@@ -1,8 +1,18 @@
 @import "tailwindcss";
 
+
+
 :root {
-	--background: #ffffff;
-	--foreground: #171717;
+	--color-bg-dark: #151515;
+	--color-text-light: #ffffff;
+	--color-maroon: #4b0a0f;
+	--container: 1200px;
+}
+
+.container {
+	max-width: var(--container);
+	margin-inline: auto;
+	padding-inline: 24px;
 }
 
 @theme inline {

@@ -1,0 +1,11 @@
+.hero {
+    height: 520px;
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+    background-image: url("/hero.jpg");
+    background-size: cover;
+    background-position: center;
+}

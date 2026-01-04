@@ -1,0 +1,23 @@
+.section {
+  background: var(--color-maroon);
+  color: var(--color-text-light);
+  padding-block: 96px; /* top and bottom space */
+}
+
+.inner {
+    /* Extra padding to mock the 'pushed right' design on Wix */
+    padding-left: clamp(24px, 6vw, 140px);
+}
+
+.title {
+  font-size: clamp(40px, 5vw, 64px);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+.subtitle {
+  margin-top: 12px;
+  font-size: 18px;
+  opacity: 0.9;
+}
