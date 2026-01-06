@@ -1,0 +1,33 @@
+.section {
+    position: relative;
+    padding: 80px 0;
+    background-color: var(--color-maroon);
+    color: #fff;
+}
+
+.inner {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: min(1100px, 100%);
+  padding: 36px 40px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.025);
+}
+
+.quote {
+  font-style: italic;
+  font-size: clamp(18px, 2.2vw, 24px);
+  line-height: 1.6;
+  max-width: 75ch;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.author {
+  margin: 0;
+  font-weight: 700;
+  opacity: 0.9;
+}

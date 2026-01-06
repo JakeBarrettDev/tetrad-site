@@ -5,11 +5,13 @@
   transform: none;
   margin-top: 0;
   margin-bottom: 0;
+  background-color: #0e0e0e;
 }
 
 .inner {
   display: flex;
   justify-content: center;
+  background-color: #0e0e0e;
 }
 
 .card {
@@ -18,6 +20,7 @@
   color: #fff;
   border-radius: 14px;
   padding: 36px 40px;
+  margin: 80px 0;
 
   /* subtle “lift” like a card sitting above the hero */
   box-shadow: 0 20px 60px rgba(0,0,0,0.35);
