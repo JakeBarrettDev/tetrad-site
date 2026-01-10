@@ -1,11 +1,11 @@
 import SiteHeader from "@/components/SiteHeader";
-import VideoBackground from "@/components/VideoBackground";
 import Hero from "@/components/Hero";
 import ServicesIntro from "@/components/ServicesIntro";
 import AboutCard from "../components/AboutCard";
-import AboutBand from "@/components/AboutBand";
 import TestimonialCarousel from "../components/TestimonialCarousel";
 import ServiceShowcase from "../components/ServiceShowcase";
+import ServicesGrid from "../components/ServicesGrid";
+import ContactSection from "../components/ContactSection";
 
 export default function Home() {
   return (
@@ -15,6 +15,9 @@ export default function Home() {
       <AboutCard />
       <TestimonialCarousel/>
       <ServiceShowcase />
+      <ServicesIntro />
+      <ServicesGrid />
+      <ContactSection />
     </>
   );
 }

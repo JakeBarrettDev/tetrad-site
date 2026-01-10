@@ -1,0 +1,164 @@
+.section {
+  padding: 100px 0;
+  background: #0e0e0e;
+  color: #fff;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.info {
+  max-width: 62ch;
+}
+
+.kicker {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.title {
+  margin: 12px 0 0;
+  font-size: clamp(28px, 3.2vw, 42px);
+  font-weight: 900;
+  letter-spacing: 0.01em;
+}
+
+.body {
+  margin: 14px 0 0;
+  opacity: 0.85;
+  line-height: 1.7;
+}
+
+.meta {
+  margin-top: 22px;
+  display: grid;
+  gap: 12px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,0.10);
+}
+
+.metaRow {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 14px;
+  align-items: baseline;
+}
+
+.metaLabel {
+  opacity: 0.7;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+
+.metaValue {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
+  opacity: 0.95;
+}
+
+.metaValue:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.note {
+  margin-top: 18px;
+  opacity: 0.75;
+  line-height: 1.6;
+}
+
+/* Form */
+.form {
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.03);
+  box-shadow: 0 22px 70px rgba(0,0,0,0.45);
+  padding: 26px;
+}
+
+.fieldRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.label {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(0,0,0,0.25);
+  color: #fff;
+  padding: 12px 12px;
+  outline: none;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: rgba(255,255,255,0.28);
+  box-shadow: 0 0 0 4px rgba(255,255,255,0.08);
+}
+
+.textarea {
+  resize: vertical;
+}
+
+.submit {
+  margin-top: 18px;
+  width: 100%;
+  border: 0;
+  border-radius: 12px;
+  background: #fff;
+  color: #111;
+  font-weight: 900;
+  padding: 12px 16px;
+  cursor: pointer;
+}
+
+.submit:hover {
+  filter: brightness(0.96);
+}
+
+.disclaimer {
+  margin: 12px 0 0;
+  opacity: 0.7;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Honeypot hidden */
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+@media (max-width: 900px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+  .fieldRow {
+    grid-template-columns: 1fr;
+  }
+}

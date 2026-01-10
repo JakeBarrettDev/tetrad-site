@@ -1,0 +1,117 @@
+.section {
+  padding: 90px 0;
+  background: #111;
+  color: #fff;
+}
+
+.inner {
+  display: grid;
+  gap: 28px;
+}
+
+.header {
+  display: grid;
+  gap: 10px;
+  max-width: 70ch;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: 900;
+  letter-spacing: 0.01em;
+}
+
+.subtitle {
+  margin: 0;
+  opacity: 0.8;
+  line-height: 1.7;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.card {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+
+  padding: 22px 22px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.03);
+
+  box-shadow: 0 18px 55px rgba(0,0,0,0.35);
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+  overflow: hidden;
+}
+
+/* Premium “spotlight” sweep */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    500px 220px at var(--mx, 30%) var(--my, 20%),
+    rgba(255,255,255,0.14),
+    transparent 55%
+  );
+  opacity: 0;
+  transition: opacity 220ms ease;
+  pointer-events: none;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 85px rgba(0,0,0,0.45);
+  border-color: rgba(255,255,255,0.18);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card:focus-visible {
+  outline: 2px solid rgba(255,255,255,0.55);
+  outline-offset: 4px;
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+}
+
+.arrow {
+  opacity: 0.8;
+  transition: transform 220ms ease, opacity 220ms ease;
+}
+
+.card:hover .arrow {
+  transform: translateX(4px);
+  opacity: 1;
+}
+
+.cardDesc {
+  margin: 10px 0 0;
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
