@@ -65,6 +65,11 @@
   transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
 }
 
+.card:focus-visible {
+  outline: 2px solid rgba(255,255,255,0.55);
+  outline-offset: 4px;
+}
+
 /* subtle “lift” */
 .card:hover {
   transform: translateY(-6px);
@@ -110,6 +115,8 @@
   font-size: clamp(18px, 2.2vw, 24px);
   line-height: 1.65;
   max-width: 75ch;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.10);
 
   /* helps glow feel like it “passes over text” */
   position: relative;
@@ -118,6 +125,7 @@
 
 .author {
   margin: 16px 0 0;
+  margin-top: 14px;
   font-weight: 800;
   opacity: 0.9;
   position: relative;
@@ -162,3 +170,58 @@
     opacity: 0;
   }
 }
+
+/* Animation for when the testimonial changes */
+.stage {
+  position: relative;
+  min-height: 260px; /* prevent layout jump */
+  display: flex;
+  align-items: center; /* vertical center */
+}
+
+.layer {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Stable layer */
+.still {
+  position: relative; /* so it participates when alone */
+  inset: auto;
+}
+
+/* Incoming */
+.inNext { animation: inNext 320ms ease both; }
+.inPrev { animation: inPrev 320ms ease both; }
+
+/* Outgoing */
+.outNext { animation: outNext 320ms ease both; }
+.outPrev { animation: outPrev 320ms ease both; }
+
+@keyframes inNext {
+  from { opacity: 0; transform: translateX(18px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes inPrev {
+  from { opacity: 0; transform: translateX(-18px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes outNext {
+  from { opacity: 1; transform: translateX(0); }
+  to   { opacity: 0; transform: translateX(-18px); }
+}
+
+@keyframes outPrev {
+  from { opacity: 1; transform: translateX(0); }
+  to   { opacity: 0; transform: translateX(18px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .inNext, .inPrev, .outNext, .outPrev { animation: none; }
+}
+
