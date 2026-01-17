@@ -9,7 +9,48 @@
   height: var(--media-h);
   position: relative;
   overflow: hidden;
+
+  display: grid;
+  place-items: center;
 }
+
+.centerContent {
+  position: relative;
+  transform: translateY(-20px);
+  z-index: 2;
+  text-align: left;
+  align-self: center;
+  width: min(900px, 92%);
+  padding: 22px 26px;
+}
+
+.centerContent::before {
+  content: "";
+  position: absolute;
+  inset: -40px -60px;
+  background: radial-gradient(
+    closest-side,
+    rgba(0,0,0,0.45),
+    rgba(0,0,0,0.18) 60%,
+    rgba(0,0,0,0.0) 100%
+  );
+  filter: blur(6px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Mobile: remove glass effect for readability */
+@media (max-width: 640px) {
+  .centerContent {
+    text-align: center;
+    background: transparent;
+    border: 0;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    padding: 0;
+  }
+}
+
 
 .video {
   position: absolute;
@@ -18,41 +59,57 @@
   height: 100%;
   object-fit: cover;
   object-position: center 40%;
+  z-index: 0;
 }
 
 .mediaOverlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.18);
-}
-
-/* The title sits on the seam at exactly media height */
-.seamTitle {
-  position: absolute;
-  left: 50%;
-  top: var(--media-h);
-  transform: translate(-50%, -50%);
-  z-index: 5;
-  text-align: center;
-  width: min(900px, 92%);
+  background: rgba(0,0,0,0.28);
+  z-index: 1;
+  pointer-events: none;
 }
 
 .title {
   margin: 0;
-  color: #fff;
   font-weight: 700;
-  letter-spacing: 0.03em;
-  font-family: var(--font-heading), serif;
-  font-size: clamp(40px, 5vw, 72px);
-  font-weight: 700;
+  letter-spacing: 0.04em;
+  font-size: clamp(64px, 7vw, 120px);
   line-height: 1.05;
   text-transform: uppercase;
-  text-shadow: 0 6px 22px rgba(0,0,0,0.55);
+
+  /* glass fill */
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.92),
+    rgba(255,255,255,0.55)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  /* keeps edges legible on bright frames */
+  -webkit-text-stroke: 1px rgba(255,255,255,0.22);
+
+  /* depth + contrast */
+  text-shadow:
+    0 14px 40px rgba(0,0,0,0.70),
+    0 2px 8px rgba(0,0,0,0.40);
 }
 
 .title span {
   display: block; /* forces 3-line layout */
 }
+
+.kicker {
+  margin: 0 0 12px;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
+  text-shadow: 0 10px 26px rgba(0,0,0,0.7);
+}
+
 
 /* BOTTOM: maroon panel */
 .maroon {

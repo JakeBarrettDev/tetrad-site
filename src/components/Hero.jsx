@@ -17,16 +17,17 @@ export default function Hero() {
           <source src="/video/hero.mp4" type="video/mp4" />
         </video>
         <div className={styles.mediaOverlay} />
-      </div>
+        <div className={styles.centerContent} >
+                    <p className={styles.kicker}>KANSAS CITY • COMMERCIAL CONSTRUCTION</p>
 
-      {/* Seam title (sits right on the boundary) */}
-      <div className={styles.seamTitle}>
-        <h1 className={`${styles.title} brandHeading`}>
-          <span>TETRAD</span>
-          <span>BUILDING</span>
-          <span>GROUP, LLC</span>
-        </h1>
+          <h1 className={`${styles.title} brandHeading`}>
+            <span>TETRAD</span>
+            <span>BUILDING</span>
+            <span>GROUP, LLC</span>
+          </h1>
+        </div>
       </div>
+    
 
       {/* Maroon panel */}
       <div className={styles.maroon}>

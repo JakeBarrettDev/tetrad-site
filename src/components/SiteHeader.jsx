@@ -8,7 +8,7 @@ export default function SiteHeader() {
             <div className={styles.logo}>TETRADBUILD.COM</div>
 
             <nav className={styles.nav}>
-                <a href="#home">Home</a>
+                <Link href="/">Home</Link>
                 <a href="#mission">Mission</a>
                 <a href="#services">Services</a>
                 <Link href="/projects">Projects</Link>
