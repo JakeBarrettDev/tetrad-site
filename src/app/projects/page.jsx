@@ -1,6 +1,7 @@
 import ProjectsGallery from "@/components/ProjectsGallery";
 import styles from "./projects.module.css";
 import SiteHeader from "../../components/SiteHeader";
+import Footer from "../../components/Footer";
 
 export const metadata = {
     title: "Projects | Tetrad Building Group, LLC",
@@ -10,8 +11,9 @@ export const metadata = {
 
 export default function ProjectsPage() {
     return (
+        <>
+        <SiteHeader />
         <main className={styles.main}>
-            <SiteHeader />
             <div className={`container ${styles.inner}`}>
                 <header className={styles.header}>
                     <h1 className={styles.title}>Projects</h1>
@@ -22,5 +24,7 @@ export default function ProjectsPage() {
                 <ProjectsGallery />
             </div>
         </main>
+        <Footer />
+        </>
     );
 }

@@ -31,12 +31,12 @@ export default function Hero() {
 
       {/* Maroon panel */}
       <div className={styles.maroon}>
-        <p className={styles.tagline}>
-          PARTNERING WITH CLIENTS FROM CONCEPT TO COMPLETION
-        </p>
+        <div className={styles.maroonInner}>
+        <p className={styles.tagline}> PARTNERING WITH CLIENTS FROM CONCEPT TO COMPLETION </p>
         <a className={styles.cta} href="#contact">
           Contact Us
         </a>
+      </div>
       </div>
     </section>
   );
