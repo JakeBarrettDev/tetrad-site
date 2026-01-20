@@ -2,6 +2,8 @@
   padding: 90px 0;
   background: #111;
   color: #fff;
+  padding-bottom: 120px;
+  border-bottom: 1px solid transparent;
 }
 
 .inner {

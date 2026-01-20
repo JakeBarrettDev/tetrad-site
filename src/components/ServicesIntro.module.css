@@ -1,6 +1,9 @@
 .section {
   background: var(--color-maroon);
   color: var(--color-text-light);
+  background-image:
+    radial-gradient(1200px 300px at 50% 0%, rgba(255,255,255,0.10), transparent 60%),
+    linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.00));
 }
 
 

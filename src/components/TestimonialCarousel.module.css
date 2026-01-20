@@ -2,6 +2,9 @@
   background: var(--color-maroon);
   padding: 90px 0;
   color: #fff;
+  background-image:
+    radial-gradient(1200px 300px at 50% 0%, rgba(255,255,255,0.10), transparent 60%),
+    linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.00));
 }
 
 .inner {
