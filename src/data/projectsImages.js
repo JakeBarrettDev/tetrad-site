@@ -36,13 +36,13 @@ export const projectImages = [
     focus: "50% 45%",
   },
   {
-    src: "/gallery/07.jpg",
+    src: "/gallery/07.JPG",
     alt: "Construction project photo",
     caption: "Site prep and staging",
     focus: "50% 45%",
   },
   {
-    src: "/gallery/08.jpg",
+    src: "/gallery/08.JPG",
     alt: "Construction project photo",
     caption: "Project completion snapshot",
     focus: "50% 50%",
