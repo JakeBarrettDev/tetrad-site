@@ -4,20 +4,20 @@ import { useEffect, useMemo, useState, useCallback } from "react";
 import Image from "next/image";
 import styles from "./ServiceShowcase.module.css";
 
-const placeholderImages = [
+const showcaseImages = [
   { src: "/gallery/01.jpg", alt: "Project photo 1", variant: "featured" },
   { src: "/gallery/02.jpg", alt: "Project photo 2", variant: "tall" },
   { src: "/gallery/03.jpg", alt: "Project photo 3", variant: "wide" },
   { src: "/gallery/04.jpg", alt: "Project photo 4", variant: "small" },
   { src: "/gallery/05.jpg", alt: "Project photo 5", variant: "small" },
   { src: "/gallery/06.jpg", alt: "Project photo 6", variant: "small" },
-  { src: "/gallery/07.jpg", alt: "Project photo 7", variant: "small" },
-  { src: "/gallery/08.jpg", alt: "Project photo 8", variant: "small" },
+  { src: "/gallery/07.JPG", alt: "Project photo 7", variant: "small" },
+  { src: "/gallery/08.JPG", alt: "Project photo 8", variant: "small" },
   { src: "/gallery/09.jpg", alt: "Project photo 9", variant: "small" },
 ];
-
+  
 export default function ServiceShowcase() {
-  const images = useMemo(() => placeholderImages, []);
+  const images = useMemo(() => showcaseImages, []);
   const total = images.length;
 
   const [openIndex, setOpenIndex] = useState(null); // number | null
