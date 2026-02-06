@@ -9,7 +9,7 @@ export default function SiteHeader() {
 
             <nav className={styles.nav}>
                 <Link href="/">Home</Link>
-                <Link href="/mission">Mission</Link>
+                <Link href="/our-mission">Mission</Link>
                 <a href="#services">Services</a>
                 <Link href="/projects">Projects</Link>
                 <a href="#more">More</a>
