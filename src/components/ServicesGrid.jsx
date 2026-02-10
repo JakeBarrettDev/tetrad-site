@@ -4,22 +4,22 @@ const services = [
   {
     title: "Building Additions",
     desc: "Large-scale expansions planned and executed with minimal disruption.",
-    href: "#contact",
+    href: "/services",
   },
   {
     title: "Structural & Site Work",
     desc: "Coordination, staging, and installation with a safety-first approach.",
-    href: "#contact",
+    href: "/services",
   },
   {
     title: "Equipment Installations",
     desc: "Generators, racks, and infrastructure installs—done cleanly and on time.",
-    href: "#contact",
+    href: "/services",
   },
   {
     title: "Project Management",
     desc: "Clear communication, tight scheduling, and detail-driven delivery.",
-    href: "#contact",
+    href: "/services",
   },
 ];
 

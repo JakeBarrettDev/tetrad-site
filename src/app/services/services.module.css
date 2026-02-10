@@ -1,0 +1,120 @@
+.hero {
+    background: var(--color-maroon);
+    color: #fff;
+    padding: 120px 0 80px;
+    text-align: center;
+    background-image:
+      radial-gradient(1200px 300px at 50% 0%, rgba(255,255,255,0.10), transparent 60%),
+      linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.00));
+  }
+  
+  .kicker {
+    margin: 0 0 12px;
+    font-size: 14px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    opacity: 0.9;
+  }
+  
+  .title {
+    margin: 0 0 16px;
+    font-size: clamp(48px, 6vw, 80px);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+  
+  .subtitle {
+    margin: 0;
+    font-size: 20px;
+    max-width: 60ch;
+    margin-inline: auto;
+    opacity: 0.9;
+    line-height: 1.5;
+  }
+  
+  .servicesSection {
+    padding: 100px 0;
+    background: var(--color-bg-dark);
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+  }
+  
+  .card {
+    padding: 40px 32px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    transition: transform 200ms ease, border-color 200ms ease, background 200ms ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-4px);
+    background: rgba(255,255,255,0.05);
+    border-color: rgba(255,255,255,0.15);
+  }
+  
+  .icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .cardTitle {
+    margin: 0 0 16px;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-text-light);
+  }
+  
+  .cardDesc {
+    margin: 0;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.8);
+  }
+  
+  .cta {
+    padding: 100px 0;
+    background: var(--color-maroon);
+    color: #fff;
+    text-align: center;
+    background-image:
+      radial-gradient(800px 200px at 50% 100%, rgba(255,255,255,0.08), transparent 70%);
+  }
+  
+  .ctaTitle {
+    margin: 0 0 16px;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 700;
+  }
+  
+  .ctaText {
+    margin: 0 0 32px;
+    font-size: 18px;
+    max-width: 50ch;
+    margin-inline: auto;
+    opacity: 0.9;
+    line-height: 1.6;
+  }
+  
+  .ctaButton {
+    display: inline-block;
+    padding: 14px 32px;
+    background: #fff;
+    color: #111;
+    text-decoration: none;
+    font-weight: 800;
+    border-radius: 10px;
+    transition: transform 160ms ease, filter 160ms ease;
+  }
+  
+  .ctaButton:hover {
+    transform: translateY(-2px);
+    filter: brightness(0.96);
+  }
+  
+  .ctaButton:active {
+    transform: translateY(0) scale(0.98);
+  }
