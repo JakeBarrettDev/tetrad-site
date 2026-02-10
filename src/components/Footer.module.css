@@ -89,3 +89,35 @@
     text-align: left;
   }
 }
+
+.credit {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  text-align: center;
+}
+
+.credit a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: rgba(255,255,255,0.5);
+  font-size: 12px;
+  transition: color 200ms ease;
+}
+
+.credit a:hover {
+  color: rgba(255,255,255,0.8);
+}
+
+.credit img {
+  height: 40px;
+  width: auto;
+  opacity: 0.6;
+  transition: opacity 200ms ease;
+}
+
+.credit a:hover img {
+  opacity: 1;
+}

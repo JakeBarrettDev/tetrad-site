@@ -11,7 +11,6 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* TODO: Update Links whene more pages are added */}
         <nav className={styles.nav} aria-label="Footer navigation">
           <a href="/home">Home</a>
           <a href="/services">Services</a>
@@ -23,9 +22,12 @@ export default function Footer() {
           <p className={styles.small}>
             © {new Date().getFullYear()} Tetrad Building Group, LLC. All rights reserved.
           </p>
-          <p className={styles.smallMuted}>
-            Built by Maroon Raccoon.
-          </p>
+          <div className={styles.credit}>
+  <a href="https://maroonraccoon.dev" target="_blank" rel="noopener noreferrer">
+    <img src="/images/maroon-raccoon-logo.png" alt="MaroonRaccoon.dev" />
+    <span>Built by MaroonRaccoon.dev</span>
+  </a>
+</div>
         </div>
       </div>
     </footer>

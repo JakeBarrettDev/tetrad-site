@@ -1,50 +1,124 @@
 .header {
     background: var(--color-bg-dark);
     color: var(--color-text-light);
-
-}
-
-.inner {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  
+  .inner {
     height: 72px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 24px;
-}
-
-.logo {
-    font-weight: 800;
-    letter-spacing: 0.04em;;
-}
-
-.nav {
+  }
+  
+  .logoLink {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    line-height: 0;
+  }
+  
+  .logoImage {
+    height: auto;
+    max-height: 100px;
+    width: auto;
+  }
+  
+  .nav {
     display: flex;
     gap: 24px;
     font-size: 14px;
-}
-
-.nav a {
+  }
+  
+  .nav a {
     opacity: 0.9;
     text-decoration: none;
     color: inherit;
-}
-
-.nav a:hover {
+    transition: opacity 160ms ease;
+  }
+  
+  .nav a:hover {
     opacity: 1;
     text-decoration: underline;
     text-underline-offset: 6px;
-}
-
-.phone {
+  }
+  
+  .phone {
     font-size: 14px;
     text-decoration: none;
     color: inherit;
     opacity: 0.95;
-}
-
-/* Mobile behavior: hide the full bar nav */
-@media (max-width: 768px) {
+    transition: opacity 160ms ease;
+  }
+  
+  .phone:hover {
+    opacity: 1;
+  }
+  
+  /* Three-line menu button (hidden on desktop) */
+  .menuButton {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+  }
+  
+  .menuButton span {
+    width: 24px;
+    height: 2px;
+    background: var(--color-text-light);
+    display: block;
+  }
+  
+  /* Mobile menu dropdown (hidden by default) */
+  .mobileMenu {
+    display: none;
+  }
+  
+  /* Mobile behavior */
+  @media (max-width: 768px) {
     .nav {
-        display: none;
+      display: none; /* Hide desktop nav */
     }
-}
+  
+    .phone {
+      display: none; /* Hide desktop phone */
+    }
+  
+    .menuButton {
+      display: flex; /* Show three-line button */
+    }
+  
+    .mobileMenu {
+      display: flex;
+      flex-direction: column;
+      background: var(--color-bg-dark);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding: 16px 24px;
+      gap: 16px;
+    }
+  
+    .mobileMenu a {
+      color: var(--color-text-light);
+      text-decoration: none;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      opacity: 0.9;
+      transition: opacity 160ms ease;
+    }
+  
+    .mobileMenu a:hover {
+      opacity: 1;
+    }
+  
+    .mobileMenu a:last-child {
+      border-bottom: none;
+    }
+  }
