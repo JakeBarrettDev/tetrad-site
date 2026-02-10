@@ -13,10 +13,10 @@ export default function Footer() {
 
         {/* TODO: Update Links whene more pages are added */}
         <nav className={styles.nav} aria-label="Footer navigation">
-          <a href="#home">Home</a>
-          <a href="#services">Services</a>
-          <a href="#testimonials">Testimonials</a>
-          <a href="#contact">Contact</a>
+          <a href="/home">Home</a>
+          <a href="/services">Services</a>
+          <a href="/testimonials">Testimonials</a>
+          <a href="/contact">Contact</a>
         </nav>
 
         <div className={styles.legal}>
